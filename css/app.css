@@ -1,0 +1,102 @@
+@font-face {
+  font-family: 'BarlowCondensedBoldItalic';
+  src: url('../fonts/BarlowCondensed-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'BarlowCondensedBoldItalic', Arial, sans-serif;
+  font-size: 8px;
+}
+
+#nike-ico {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+#nike-ico * {
+  animation-fill-mode: backwards;
+  fill-opacity: 0;
+  transition: fill-opacity 1s;
+}
+
+
+#nike-ico.drawn * {
+  fill: #000;
+  fill-opacity: 1;
+}
+
+.root {
+  position: relative;
+  max-width: 300px;
+  height: 600px;
+  height: fit-content;
+  margin: auto;
+}
+
+.items {
+  display: flex;
+}
+
+.items__item {
+  max-width: 300px;
+  width: 100%;
+  background: linear-gradient(180deg, #FFFFFF 0%, #9EA3AB 75%, #E3E3E3 100%);
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item__heading {
+  font-size: 4rem;
+  line-height: 4.75rem;
+  text-align: center;
+  color: #111111;
+  max-height: 85px;
+  margin-top: 74px;
+}
+
+.item__price {
+  font-size: 3rem;
+  background-color: #FF0000;
+  color: white;
+  width: 109px;
+  height: 39px;
+  padding: 4px 20px 6px;
+  margin: 26px auto;
+}
+
+.item__image {
+  width: 200px;
+  max-width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.item__link {
+  display: block;
+  font-size: 4rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  padding: 4px 24px 8px;
+  background-color: #111;
+  width: 188px;
+  height: 50px;
+  text-align: center;
+  margin: 0 auto;
+}
