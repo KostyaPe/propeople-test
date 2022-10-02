@@ -48,13 +48,15 @@ fetch('https://solovey.com.ua/test/data.json')
       const $itemImg  = document.createElement('div');
       const $itemLink = document.createElement('a');
 
-      if (i == 0) [$h1, $price, $itemImg, $itemLink].forEach(node => {
-        node.classList.add('wow', 'slideInRight');
-        node
-          .dataset['wowOffset'] = '1';
-        node
-          .dataset['wowDuration'] = '0.5s';
-      });
+      if (i == 0) {
+        [$h1, $price, $itemImg, $itemLink].forEach(node => {
+          node.classList.add('wow', 'slideInRight');
+          node
+            .dataset['wowOffset'] = '1';
+          node
+            .dataset['wowDuration'] = '0.5s';
+        });
+      }
 
       $item
         .classList.add('items__item', 'item', 'splide__slide');
