@@ -67,7 +67,7 @@ fetch('https://solovey.com.ua/test/data.json')
       $itemImg
         .classList.add('item__image');
       $itemLink
-        .classList.add('item__link');
+        .classList.add('item__link', `ml${i}`);
 
       $h1.innerHTML       = item.model;
       $price.innerHTML    = `${data.currency}${item.price}`;
@@ -75,10 +75,23 @@ fetch('https://solovey.com.ua/test/data.json')
       $itemLink.href      = item.link;
       $itemLink.innerHTML = 'Order now!';
 
+      $item.addEventListener('click', function() {
+        window.open(item.link, '_blank');
+      });
+
       $item
         .append($h1, $price, $itemImg, $itemLink);
       $itemsList
         .append($item);
+
+        new Typewriter($itemLink, {
+          strings: ['Order now!'],
+          cursor: '|',
+          delay: 'natural', // 'natural' or Number
+          loop: false, // infinite loop
+          deleteSpeed: Infinity,
+          autoStart: true,
+      });
     });
 
     const splide = new Splide( '.splide', {
@@ -118,5 +131,15 @@ fetch('https://solovey.com.ua/test/data.json')
           this.parentEl.classList.add('drawn');
         },
       );
+
+      const currentTxt = document.querySelector(`.ml${index}`);
+      new Typewriter(currentTxt, {
+        strings: ['Order now!'],
+        cursor: '|',
+        delay: 'natural', // 'natural' or Number
+        loop: false, // infinite loop
+        deleteSpeed: Infinity,
+        autoStart: true,
+      });
     });
   });

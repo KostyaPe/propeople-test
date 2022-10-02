@@ -59,6 +59,10 @@ html {
   justify-content: space-between;
 }
 
+.items__item {
+  cursor: pointer;
+}
+
 .item__heading {
   font-size: 4rem;
   line-height: 4.75rem;
@@ -88,15 +92,16 @@ html {
 }
 
 .item__link {
-  display: block;
-  font-size: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
   text-transform: uppercase;
   text-decoration: none;
   color: white;
-  padding: 4px 24px 8px;
+  padding: 8px 0;
   background-color: #111;
   width: 188px;
   height: 50px;
-  text-align: center;
   margin: 0 auto;
 }
